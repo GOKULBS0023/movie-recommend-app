@@ -1,0 +1,4 @@
+.wrapper{
+    padding: 15rem 10rem 8rem 10rem;
+    min-height: calc(100vh - 8rem);
+}

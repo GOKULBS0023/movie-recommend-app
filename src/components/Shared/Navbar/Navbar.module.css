@@ -1,0 +1,100 @@
+.nav {
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  padding: 0 5vw;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #777;
+  position: fixed;
+  z-index: 999;
+  background-color: #071952;
+}
+
+.nav__logo {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 3.6rem;
+  font-weight: 900;
+  > .nav__logo-color {
+    color: #ffdd83;
+    transition: all 0.5s;
+  }
+}
+
+.nav__logo:hover {
+  > .nav__logo-color {
+    color: #fff;
+  }
+}
+
+.nav__items {
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+  transition: all 0.3s;
+  &:hover {
+    color: #ffdd83;
+  }
+}
+.active {
+  color: #ffdd83 !important;
+}
+.nav__auth-btn {
+  display: flex;
+  gap: 2rem;
+}
+.user__btn {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #071952;
+  font-size: 2rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.user__btn:hover,
+.user__btn.active {
+  background-color: transparent;
+  color: #ffdd83;
+  border: 1px solid #ffdd83;
+}
+@media screen and (max-width: 800px) {
+  .nav {
+    padding: 0 3vw;
+  }
+  .nav__items {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  .nav__auth-btn {
+    gap: 1.2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav {
+    padding: 0 3vw;
+    height: 6rem;
+  }
+  .nav__items {
+    font-size: 1.6rem;
+    letter-spacing: 1.2px;
+  }
+  .nav__logo {
+    font-size: 2.8rem;
+    font-weight: 800;
+    > .nav__logo-color {
+      color: #ffdd83;
+      transition: all 0.5s;
+    }
+  }
+  .user__btn {
+    width: 3.6rem;
+    height: 3.6rem;
+    font-size: 1.8rem;
+  }
+}
