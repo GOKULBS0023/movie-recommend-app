@@ -61,7 +61,7 @@ const Signup = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        if (errorCode == "auth/email-already-in-use") {
+        if (errorCode === "auth/email-already-in-use") {
           alert(
             "Entered email id already registered with us. Kindly try login or use another email id to signup!"
           );

@@ -39,7 +39,7 @@ const User = () => {
     } else {
       setIsLoggedIn(false);
     }
-  }, []);
+  });
 
   return (
     <React.Fragment>
