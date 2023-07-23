@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { img_300 } from "../../../../../Config/tmdb";
 import { unavailable } from "../../../../../Config/tmdb";
 import Styles from "./ShowContent.module.css";
-import AuthContext from "../../../../../Context/AuthContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import { faHeart as faSolidHeart } from "@fortawesome/free-solid-svg-icons";
+// import AuthContext from "../../../../../Context/AuthContext";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faHeart } from "@fortawesome/free-regular-svg-icons";
+// import { faHeart as faSolidHeart } from "@fortawesome/free-solid-svg-icons";
 // import { useNavigate } from "react-router-dom";
 // import { db } from "../../../../../Config/Firebase";
 // import { ref, onValue, child, push, update } from "firebase/database";
@@ -42,7 +42,7 @@ const ShowContent = ({ content, media }) => {
   return (
     <div key={id} id={id} className={Styles["content__box"]}>
       <div className={Styles["content__img-box"]}>
-        <img src={poster ? `${img_300}${poster}` : unavailable} />
+        <img src={poster ? `${img_300}${poster}` : unavailable} alt={title}/>
         {/* <p className={Styles["fav__icon"]} onClick={handleFavButton}>
           {isFav ? (
             <FontAwesomeIcon

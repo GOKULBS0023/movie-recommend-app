@@ -31,9 +31,9 @@ const Login = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        if (errorCode == "auth/wrong-password") {
+        if (errorCode === "auth/wrong-password") {
           alert("Kindly enter the valid password!");
-        } else if (errorCode == "auth/user-not-found") {
+        } else if (errorCode === "auth/user-not-found") {
           alert("Kindly register to continue!");
           navigate("/signup");
         }
@@ -57,11 +57,7 @@ const Login = () => {
         console.log(error.code);
       });
   };
-  useEffect(() => {
-    if (auth?.currentUser?.email) {
-      navigate("/home");
-    }
-  }, []);
+  
 
   return (
     <React.Fragment>

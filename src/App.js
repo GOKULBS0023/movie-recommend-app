@@ -7,7 +7,7 @@ import Signup from "./components/Pages/Auth/Signup";
 import Series from "./components/Pages/Home/Series/Series";
 import Movies from "./components/Pages/Home/Movies/Movies";
 import Search from "./components/Pages/Home/Search/Search";
-import Favorites from "./components/Pages/Home/Favorites/Favorites";
+// import Favorites from "./components/Pages/Home/Favorites/Favorites";
 
 function App() {
   return (

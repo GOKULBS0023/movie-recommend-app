@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { auth } from "../../../Config/Firebase";
+// import { auth } from "../../../Config/Firebase";
 import { tmdb_api } from "../../../API_KEYS/api_key";
 import Navbar from "../../Shared/Navbar/Navbar";
 import DisplayContentList from "./DisplayContentList/DisplayContentList";
