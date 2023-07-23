@@ -18,6 +18,9 @@ const Navbar = (props) => {
     setWindowSize(window.innerWidth);
   };
   window.addEventListener("resize", getWindowSize);
+  useEffect(() => {
+    getWindowSize();
+  },[windowSize]);
   return (
     <nav className={Styles.nav}>
       <NavLink to="/" className={Styles["nav__logo"]}>
@@ -95,13 +98,15 @@ const Navbar = (props) => {
               </Link>
             </>
           ) : (
-            <div
-              className={`${Styles["user__btn"]} ${
-                props.page === "user" && Styles["active"]
-              }`}
-            >
-              <FontAwesomeIcon icon={faUser} />
-            </div>
+            <Link to="/login">
+              <div
+                className={`${Styles["user__btn"]} ${
+                  props.page === "user" && Styles["active"]
+                }`}
+              >
+                <FontAwesomeIcon icon={faUser} />
+              </div>
+            </Link>
           )}
         </div>
       )}
